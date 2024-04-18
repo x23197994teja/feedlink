@@ -21,18 +21,26 @@
 
 delete from property where description='cvfdvdf' ;
 
-update property set address='Portmarnock Clubhouse, Coast Road, County Dublin, D13 VH92' where posted_by='ac' ;]]></console>
+update property set address='Portmarnock Clubhouse, Coast Road, County Dublin, D13 VH92' where posted_by='ac' ;
+
+delete from token;
+
+delete from users ;
+
+select * from property ;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="0ee75893-0762-474c-8bb1-05cdb061d69d" object-ref="consoles/mygeneric" />
-    </open-files>
+    <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="0ee75893-0762-474c-8bb1-05cdb061d69d" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="0ee75893-0762-474c-8bb1-05cdb061d69d" dataset="mygeneric.users" active-filter-id="" />
     <filter-actions connection-id="0ee75893-0762-474c-8bb1-05cdb061d69d" dataset="mygeneric.property" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
