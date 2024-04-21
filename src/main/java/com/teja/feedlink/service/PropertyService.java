@@ -162,14 +162,21 @@ public class PropertyService {
 
     private void sendEmail(User productUser, User enquiryUser, Property property) {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("shantanumalviya19@gmail.com");
+        message.setFrom("tejagadikota7@gmail.com");
         message.setTo(productUser.getEmail());
-        message.setSubject("Enquiry for your cataloged construction work : " + property.getName());
-        message.setText("A contactor has shown an interest on your added enquiry for your property : "
-                + property.getName() +
-                ", \n\n kindly Email the potential contractor for discussing the requirement details and quotation. \n\nHere Is The Details Of Enquirer. " +
-                " Name: " + enquiryUser.getFirstname() + " " + enquiryUser.getLastname() + " " +
-                " Email ID: " + enquiryUser.getEmail()+" \n\n Thanks & Regards \nTeam Homey");
+        message.setSubject("Enquiry Related To Pick UP Of Donation Posted By : " + property.getName());
+
+        String emailMsg = "Dear " + property.getName() + ",\n\n" +
+                "A potential receiver has shown interest in receiving food donations through Feedlink. We kindly request that you reach out to the receiver to discuss the food donation details.\n\n" +
+                "Here are the details of the enquirer:\n\n" +
+                " Name: " + enquiryUser.getFirstname() + " " + enquiryUser.getLastname() + "\n" +
+                " Email ID: " + enquiryUser.getEmail() + "\n\n" +
+                "Please contact the receiver at your earliest convenience to discuss the food donation process and any necessary arrangements. If you have any questions or need assistance, feel free to reach out to us.\n\n" +
+                "Thank you for your commitment to supporting cattle welfare through Feedlink.\n\n" +
+                "Best regards,\n\n" +
+                "Team Feedlink";
+
+        message.setText(emailMsg);
         this.emailSender.send(message);
     }
 }
